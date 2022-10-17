@@ -1,0 +1,523 @@
+.sc-main {
+    height: 687px;
+
+}
+
+.main-slide {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    .swiper-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        box-sizing: content-box;
+    }
+
+    .swiper-slide {
+        position: relative;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .text-box {
+        position: absolute;
+        bottom: 0;
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        padding: 20% 7.5%;
+        box-sizing: border-box;
+
+        p {
+            color: #fff;
+        }
+
+        .main-title {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 1.25;
+            letter-spacing: -1.3px;
+        }
+
+        .sub-title {
+            font-weight: 400;
+            padding-top: 15px;
+            font-size: 17px;
+            line-height: 1.4;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+    }
+}
+
+.sc-best, .sc-newitem {
+    .more-btn {
+        padding: 0 38px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-bottom: 65px;
+        a {
+            display: block;
+            width: 100%;
+            height: 52px;
+            line-height: 52px;
+            border: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            background: #fff;
+            font-size: 15px;
+            color: #222;
+            font-weight: 500;
+            text-align: center;
+            &::after {
+                content: '';
+                padding-left: 24px;
+                width: 19px;
+                height: 19px;
+                background: url(../images/go_cate.png) no-repeat;
+                background-size: 19px auto;
+                background-position: center;
+            }
+        }
+    }
+}
+
+.common-list {
+    @include flex('jcsb');
+    flex-wrap: wrap;
+    gap: 2.22%;
+    .common-item {
+        width: calc((100% - 2.22%) / 2);
+        padding-bottom: 50px;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        
+        
+    }
+
+    .img-box {
+        position: relative;
+        .poa {
+            position: absolute;
+            top: 0;right: 0;
+
+            width: 20%;
+            min-width: 40px;
+        }
+    }
+    .text-box {
+        padding: 15px 5% 17px;
+    }
+
+    .review {
+        display: block;
+        width: 100%;
+        font-size: 13px;
+        line-height: 13px;
+        font-weight: 600;
+        color: #8e1f29;
+    }
+
+    .title {
+        @include ellip; //말줄임소스
+        padding: 10px 0;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: -0.05em;
+        line-height: 17px;
+    }
+
+    .discount {
+
+        //전체
+        .percentage {
+            color: #8E1F29;
+            font-weight: 600;
+            margin-right: 5px;
+            vertical-align: top;
+            font-size: 15px;
+            letter-spacing: -0.03em;
+        }
+
+        .sale {
+            padding: 0;
+            font-size: 15px;
+            line-height: 16px;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            vertical-align: top;
+        }
+
+        .cost {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #8d8d8d;
+            margin-left: 5px;
+            text-decoration: line-through;
+        }
+    }
+
+}
+
+.sc-midbanner {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 120px;
+
+    a {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.sc-ad {
+    .text-box {
+        padding: 20px 16px 20px;
+        .title {
+            font-size: 26px;
+            line-height: 35px;
+            color: #333;
+            letter-spacing: -0.05em;
+            font-weight: 700;
+        }
+        .sub {
+            padding: 14px 0 28px;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: -0.05em;
+            color: #333;
+            font-weight: 400;
+        }
+    }
+    .to-see {
+        display: inline-block;
+        background-color: #1e1e1e;
+        border-radius: 2px;
+        border: 1px solid #1e1e1e;
+        box-sizing: border-box;
+        color: #fff;
+        padding: 8px 47px 8px 18px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.03em;
+        font-weight: 500;
+        background-image: url(../images/icon_move.png);
+        background-repeat: no-repeat;
+        background-size: 15px auto;
+        background-position: calc(100% - 18px) center;
+    }
+}
+
+.sc-smallad {
+    padding: 0 16px;
+}
+.ad-item {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+
+    &:nth-child(1)::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #eee;
+        display: block;
+        position: absolute;
+        bottom: 0; 
+    }
+    .img-box {
+        max-width: 110px;
+        margin: 0;
+        position: relative;
+        .poa {
+            position: absolute;
+            width: 30px;
+            top: 0;
+            right: 0;
+        }
+    }
+    .text-box {
+        padding: 0 28px;
+        .review {
+            color: #8e1f29;
+            padding-left: 0px;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 13px;
+        }
+        .title {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: -0.05em;
+        }
+        .discount {
+            font-size: 15px;
+            line-height: 16px;
+            letter-spacing: -0.03em;
+        }
+        .percentage {
+            color: #8E1F29;
+            font-weight: bold;
+            margin-right: 5px;
+            vertical-align: top;
+        }
+        .sale {
+            color: #333;
+            padding: 0;
+            font-size: 15px;
+            line-height: 16px;
+            font-weight: 500;
+            vertical-align: top;
+        }
+        .cost {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #8d8d8d;
+            margin-left: 5px;
+            text-decoration: line-through;
+        }
+    }
+}
+
+.second-ad{
+    padding-top: 40px;
+}
+
+.sc-brandstory {
+    padding: 20px 0;
+    .bg {
+        display: block;
+        padding: 56px 20px;
+        background-color: #C86733;
+    }
+    .subtitle {
+        color: #fff;
+        font-size: 18px;
+        letter-spacing: -0.5px;
+        margin: 0 auto 10px;
+        font-weight: 400;
+        display: inline-block;
+        border-bottom: 1.5px solid #fff;
+        padding-bottom: 5px;
+        line-height: 1.2;
+    }
+    .title {
+        display: block;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: -0.03em;
+        color: #fff;
+        font-weight: 700;
+    }
+    .dsc {
+        padding: 10px 0 5px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: #fff;
+        letter-spacing: -0.02em;
+        font-weight: 400;
+    }
+    .see {
+        display: inline-block;
+        width: 100px;
+        margin-top: 20px;
+        padding: 10px 0;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: -0.03em;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid #fff;
+    }
+}
+
+.sc-leggings{padding-left: 20px; position: relative;}
+.sc-bratop{padding-left: 20px; position: relative;}
+.sc-set{padding-left: 20px; position: relative; padding-top: 8px;}
+.link-more{position: absolute;
+    display: inline-block;
+    top: 35px;
+    right: 5%;
+    padding: 0 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    vertical-align: middle;
+
+    &::after{    
+        position: absolute;
+        width: 15px;
+        height: 11px;
+        right: -14px;
+        bottom: 5px ;
+        background-image: url(../images/more_btn.png);
+        background-repeat: no-repeat;
+        background-size: 15px auto;
+        background-position: center;
+        content: '';}   
+}
+
+.sc-leggings, .sc-bratop, .sc-set {
+    .box {
+        display: block;
+        max-width: 100%;
+    }
+    
+    .img-box {
+
+        position: relative;
+        >img {
+            width: 100%;
+            height: auto;
+        }
+        .poa {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 40px;
+        }
+    }
+    .text-box {
+        padding: 15px 5% 0px;
+    }
+
+    .review {
+        display: block;
+        width: 100%;
+        font-size: 13px;
+        line-height: 13px;
+        font-weight: 600;
+        color: #8e1f29;
+    }
+
+    .title {
+        @include ellip; //말줄임소스
+        padding: 10px 0;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: -0.05em;
+        line-height: 17px;
+    }
+
+    .discount {
+
+        //전체
+        .percentage {
+            color: #8E1F29;
+            font-weight: 600;
+            margin-right: 5px;
+            vertical-align: top;
+            font-size: 15px;
+            letter-spacing: -0.03em;
+        }
+
+        .sale {
+            padding: 0;
+            font-size: 15px;
+            line-height: 16px;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            vertical-align: top;
+        }
+
+        .cost {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #8d8d8d;
+            margin-left: 5px;
+            text-decoration: line-through;
+        }
+    }
+
+    .extra-dsc {
+        margin-top: 15px;
+        padding-top: 8px;
+        .dsc {
+            color: #8e1f28;
+            font-size: 9px;
+            line-height: 9px;
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            border: 1px solid rgba(142, 31, 41, 0.5);
+            padding: 5px 6px;
+            display: inline-block;
+        }
+    }
+}
+
+.bottom-banner {
+    padding-top: 70px;
+    position: relative;
+}
+.sc-banner {
+    &.membership {
+        background: url(../images/banner_01.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.store a {
+        background: url(../images/banner-mo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 10px;
+    }
+    a {
+        display: block;
+        background-repeat: no-repeat;
+        padding: 65px 20px;
+    }
+    
+    .headline-ban {
+        font-size: 26px;
+        line-height: 31px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #fff;
+    }
+    .dsc {
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        color: #fff;
+        padding: 15px 0 30px;
+    }
+    .see {
+        border: 1px solid #fff;
+        padding: 7px 25px 8px;
+        color: #fff;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.03em;
+        display: inline-block;
+        margin-top: 30px;
+    }
+}
